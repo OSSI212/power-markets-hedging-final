@@ -26,7 +26,8 @@ This repository contains the reproducible code for the submission: the data brie
   - `3_hedge.ipynb` - futures hedge optimization
   - `4_delivery.ipynb` - Day-Ahead shaping
   - `5_settlement.ipynb` - imbalance settlement
-  - `6_analysis.ipynb` - strategy comparison, recommendation, and stress test
+  - `6_analysis.ipynb` - strategy comparison and recommendation
+  - `7_event.ipynb` - interpret a severe Day-Ahead price event and its effect on each strategy
   - `8_extensions_pricing.ipynb` - optional extension: an ex-ante fixed customer price
 - `data/` - source CSVs and intermediate results produced by the notebooks; see
   `data/README.md` for a description of every file
