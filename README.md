@@ -21,7 +21,7 @@ This repository contains the reproducible code for the submission: the data brie
   - `Exhibit 4 - Realised market prices/`
   - `Close the briefing/` - the three review questions, answered in English and German
 - `notebooks/` - the main analysis, run in order:
-  - `stage1_forecasting.ipynb` - customer load forecast
+  - `1_Forcast.ipynb` - customer load forecast
   - `2_hpfc.ipynb` - Hourly Price Forward Curve
   - `3_hedge.ipynb` - futures hedge optimization
   - `4_delivery.ipynb` - Day-Ahead shaping
