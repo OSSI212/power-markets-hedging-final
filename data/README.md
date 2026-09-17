@@ -1,7 +1,9 @@
 # Data
 
-All files provided by the course. `data_dictionary.csv` has the per-column
-definitions, `sources.csv` the publishers and links.
+The files under "Provided by the course" below are the raw inputs; `data_dictionary.csv` has
+their per-column definitions and `sources.csv` the publishers and links. Everything else in this
+folder is an intermediate or final result written by the notebooks in `notebooks/` - see each
+notebook's own **Input**/**Output** note for exactly which file it reads and writes.
 
 ## Common conventions
 
@@ -12,7 +14,7 @@ definitions, `sources.csv` the publishers and links.
 - Energy in MWh, prices in EUR/MWh. A quarter-hour MWh value = 0.25 h x MW.
 - Peak = Monday-Friday 08:00-20:00 local time. Everything else is Off-Peak.
 
-## Files
+## Files provided by the course
 
 | File | What it is | Key columns / notes |
 |------|------------|---------------------|
@@ -28,3 +30,21 @@ definitions, `sources.csv` the publishers and links.
 Note: the futures snapshot and the actual portfolio load are synthetic teaching
 data; the load profiles and market prices come from public sources; the shape
 factors are derived from public Day-Ahead data.
+
+## Files written by the notebooks (pipeline outputs)
+
+| File | Written by | What it is |
+|------|------------|------------|
+| `forecast_load.csv` | `1_Forcast.ipynb` | Quarter-hourly forecast load per customer group and total. |
+| `hpfc.csv` | `2_hpfc.ipynb` | The constructed Hourly Price Forward Curve for 2024. |
+| `selected_products.csv` | `2_hpfc.ipynb` | The eligible non-overlapping futures (COARSE_CAL and GRANULAR) used to build the curve and price the hedge. |
+| `hedge_positions.csv` | `3_hedge.ipynb` | Optimal Base/Peak futures position per block, per strategy. |
+| `hedge_energy.csv` | `3_hedge.ipynb` | Resulting hedge energy per quarter-hour, per strategy. |
+| `residual_da.csv` | `4_delivery.ipynb` | Per-quarter-hour Day-Ahead residual for every strategy. |
+| `forecast_costs.csv` | `4_delivery.ipynb` | Futures + Day-Ahead-residual cost per strategy (before imbalance). |
+| `imbalance.csv` | `5_settlement.ipynb` | Per-quarter-hour imbalance volume and price. |
+| `final_costs.csv` | `5_settlement.ipynb` | Final procurement cost per strategy, including imbalance settlement. |
+| `strategy_comparison.csv` | `6_analysis.ipynb` | The full eight-measure strategy comparison behind the management recommendation. |
+| `severe_event.csv` | `7_event.ipynb` | The event-window data behind the December 2024 price-event discussion. |
+| `quarter_only_positions.csv` | `8_extensions_pricing.ipynb` (Extension 2) | Futures positions for the QUARTER_ONLY hedge design. |
+| `quarter_only_costs.csv` | `8_extensions_pricing.ipynb` (Extension 2) | Full cost comparison including QUARTER_ONLY. |

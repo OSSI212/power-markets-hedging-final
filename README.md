@@ -19,7 +19,7 @@ This repository contains the reproducible code for the submission: the data brie
   - `Exhibit 2 - Futures market/`
   - `Exhibit 3 - Historical price shape/`
   - `Exhibit 4 - Realised market prices/`
-  - `Close the briefing/` - the three review questions, answered in English and German
+  - `Close the briefing/` - the three review questions, answered in English
 - `notebooks/` - the main analysis, run in order:
   - `1_Forcast.ipynb` - customer load forecast
   - `2_hpfc.ipynb` - Hourly Price Forward Curve
