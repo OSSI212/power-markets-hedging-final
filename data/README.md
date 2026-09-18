@@ -45,6 +45,8 @@ factors are derived from public Day-Ahead data.
 | `imbalance.csv` | `5_settlement.ipynb` | Per-quarter-hour imbalance volume and price. |
 | `final_costs.csv` | `5_settlement.ipynb` | Final procurement cost per strategy, including imbalance settlement. |
 | `strategy_comparison.csv` | `6_analysis.ipynb` | The full eight-measure strategy comparison behind the management recommendation. |
+| `monthly_price_by_strategy.csv` | `6_analysis.ipynb` | Monthly procurement price (EUR/MWh) per strategy, the series `strategy_comparison.csv`'s std/range are computed from. |
 | `severe_event.csv` | `7_event.ipynb` | The event-window data behind the December 2024 price-event discussion. |
 | `quarter_only_positions.csv` | `8_extensions_pricing.ipynb` (Extension 2) | Futures positions for the QUARTER_ONLY hedge design. |
-| `quarter_only_costs.csv` | `8_extensions_pricing.ipynb` (Extension 2) | Full cost comparison including QUARTER_ONLY. |
+| `quarter_only_costs.csv` | `8_extensions_pricing.ipynb` (Extension 2) | Cost decomposition (C_futures/C_residual_DA/.../C_final) including QUARTER_ONLY. |
+| `quarter_only_comparison.csv` | `8_extensions_pricing.ipynb` (Extension 2) | The same eight measures as `strategy_comparison.csv`, extended to all four strategies including QUARTER_ONLY. |
