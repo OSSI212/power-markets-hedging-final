@@ -28,8 +28,9 @@ This repository contains the reproducible code for the submission: the data brie
   - `5_settlement.ipynb` - imbalance settlement
   - `6_analysis.ipynb` - strategy comparison and recommendation
   - `7_event.ipynb` - interpret a severe Day-Ahead price event and its effect on each strategy
-  - `8_extensions_pricing.ipynb` - optional extensions: an ex-ante fixed customer price, and a
-    QUARTER_ONLY hedge design tested against UNHEDGED/COARSE_CAL/GRANULAR
+  - `8_extensions_pricing.ipynb` - optional extensions: an ex-ante fixed customer price; a
+    QUARTER_ONLY hedge design tested against UNHEDGED/COARSE_CAL/GRANULAR; and a no-overhedging
+    trading constraint re-solved for COARSE_CAL/GRANULAR
 - `data/` - source CSVs and intermediate results produced by the notebooks; see
   `data/README.md` for a description of every file
 
